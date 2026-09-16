@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --pme-blue: #14358f;
+  --pme-blue-secondary: #1e46b5;
+  --pme-violet: #5a16e8;
+  --pme-magenta: #c018a9;
+  --pme-magenta-cta: #d10bae;
+  --pme-lavender: #f1e9ff;
+  --pme-blue-light: #eef3ff;
+  --pme-blue-dark: #162c70;
+  --pme-text: #24304a;
+  --pme-white: #ffffff;
+
+  --background: var(--pme-white);
+  --foreground: var(--pme-text);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-pme-blue: var(--pme-blue);
+  --color-pme-blue-secondary: var(--pme-blue-secondary);
+  --color-pme-violet: var(--pme-violet);
+  --color-pme-magenta: var(--pme-magenta);
+  --color-pme-magenta-cta: var(--pme-magenta-cta);
+  --color-pme-lavender: var(--pme-lavender);
+  --color-pme-blue-light: var(--pme-blue-light);
+  --color-pme-blue-dark: var(--pme-blue-dark);
+  --color-pme-text: var(--pme-text);
+
+  --font-heading: var(--font-montserrat);
+  --font-body: var(--font-inter);
+  --font-script: var(--font-caveat);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+.font-heading {
+  font-family: var(--font-heading), Arial, Helvetica, sans-serif;
+}
+
+.pme-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--pme-blue) 0%,
+    var(--pme-violet) 55%,
+    var(--pme-magenta) 100%
+  );
+}
+
+.pme-script {
+  font-family: var(--font-script), cursive;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
